@@ -36,3 +36,4 @@ console.log(jianXiaojiejieFn(),"func");
 
 const jianxiaojiejie:()=>string=()=>{return '111'}
 
+// 因为一切皆对象,上面对象类型,数组类型,类类型,函数类型统一都称为对象
