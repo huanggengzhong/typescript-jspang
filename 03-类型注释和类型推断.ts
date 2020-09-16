@@ -22,3 +22,8 @@ console.log(total,"sum");
 
 // 这里的total不需要加类型注解,因为它会自动类型推断
 
+const Xiaojiejie={//鼠标移动到上面也会有类型推断
+    name:"刘英",
+    age:18
+}
+// ts一个原则:当类型推断不出来的要自己加类型注释
