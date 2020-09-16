@@ -40,6 +40,23 @@ function forNaver():never{
     
 }
 
+// 特别主要,函数的参数是对象时的写法
+// function add({one:number,two:number}){//不能这样写
+function addSum({one,two}:{one:number,two:number}){
+    return one+two
+}
+
+const add =addSum({one:1,two:5})
+console.log(add);//6
+
+// 即使参数的对象是一个值也要这么写
+
+function addSum2({one}:{one:number}):number{
+    return one
+}
+const add2=addSum2({one:9})
+console.log(add2);
+
 
 
 
