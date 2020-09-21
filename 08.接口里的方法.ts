@@ -7,4 +7,5 @@ interface Girl{
     bust:number,
     waistline?:number,//非必填
     [proname:string]:any//允许加入任意值
+    
 }
