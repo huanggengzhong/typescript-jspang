@@ -1,5 +1,5 @@
 
-// 
+// 接口
 
 interface Girl{
     name:string,
