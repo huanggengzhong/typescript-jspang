@@ -66,6 +66,7 @@ interface Girl { //接口
 // 接口里的非必填值
 
 // 比如下面腰围非必填
+// ShadowRoot
 
 interface Girl2{
     name:string,
