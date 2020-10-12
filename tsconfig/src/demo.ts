@@ -1,8 +1,12 @@
 //tsconfig
-const person: string = 'jspang'
+// const person: string = 'jspang'
 
-// function jspang(name: any) {
+// export function jspang(name: any) {
 //   return name;
 // }
 
+const jspang: string = "jspang";
+console.log(jspang);
+
 // const jspang: string = null;
+export const name = "jspang";
