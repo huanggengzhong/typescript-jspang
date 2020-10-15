@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"></script>
   <script src="./build/main.js"></script>
   <title>Document</title>
 </head>
@@ -12,7 +13,10 @@
 </body>
 <script>
   // new Page()//没有使用命名空间
-  new Home.Page()
+  // new Home.Page()//使用了命名空间
+  require(["main"], function (main) { //参数2是回调函数
+    new main.default()
+  })
 </script>
 
 </html>

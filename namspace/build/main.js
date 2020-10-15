@@ -1,6 +1,7 @@
-"use strict";
-var Components;
-(function (Components) {
+define("components", ["require", "exports"], function (require, exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.Footer = exports.Content = exports.Header = void 0;
     var Header = (function () {
         function Header() {
             var el = document.createElement("div");
@@ -9,7 +10,7 @@ var Components;
         }
         return Header;
     }());
-    Components.Header = Header;
+    exports.Header = Header;
     var Content = (function () {
         function Content() {
             var el = document.createElement("div");
@@ -18,7 +19,7 @@ var Components;
         }
         return Content;
     }());
-    Components.Content = Content;
+    exports.Content = Content;
     var Footer = (function () {
         function Footer() {
             var el = document.createElement("div");
@@ -27,26 +28,18 @@ var Components;
         }
         return Footer;
     }());
-    Components.Footer = Footer;
-    var SubComponents;
-    (function (SubComponents) {
-        var Test = (function () {
-            function Test() {
-            }
-            return Test;
-        }());
-        SubComponents.Test = Test;
-    })(SubComponents = Components.SubComponents || (Components.SubComponents = {}));
-})(Components || (Components = {}));
-var Home;
-(function (Home) {
+    exports.Footer = Footer;
+});
+define("main", ["require", "exports", "components"], function (require, exports, components_1) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
     var Page = (function () {
         function Page() {
-            new Components.Header();
-            new Components.Content();
-            new Components.Footer();
+            new components_1.Header();
+            new components_1.Content();
+            new components_1.Footer();
         }
         return Page;
     }());
-    Home.Page = Page;
-})(Home || (Home = {}));
+    exports.default = Page;
+});
