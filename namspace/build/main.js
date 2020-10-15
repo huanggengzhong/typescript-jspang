@@ -1,14 +1,15 @@
 "use strict";
-var Home;
-(function (Home) {
+var Components;
+(function (Components) {
     var Header = (function () {
         function Header() {
-            var el = document.createElement('div');
+            var el = document.createElement("div");
             el.innerText = "This is Header";
             document.body.appendChild(el);
         }
         return Header;
     }());
+    Components.Header = Header;
     var Content = (function () {
         function Content() {
             var el = document.createElement("div");
@@ -17,6 +18,7 @@ var Home;
         }
         return Content;
     }());
+    Components.Content = Content;
     var Footer = (function () {
         function Footer() {
             var el = document.createElement("div");
@@ -25,11 +27,24 @@ var Home;
         }
         return Footer;
     }());
+    Components.Footer = Footer;
+    var SubComponents;
+    (function (SubComponents) {
+        var Test = (function () {
+            function Test() {
+            }
+            return Test;
+        }());
+        SubComponents.Test = Test;
+    })(SubComponents = Components.SubComponents || (Components.SubComponents = {}));
+})(Components || (Components = {}));
+var Home;
+(function (Home) {
     var Page = (function () {
         function Page() {
-            new Header();
-            new Content();
-            new Footer();
+            new Components.Header();
+            new Components.Content();
+            new Components.Footer();
         }
         return Page;
     }());
