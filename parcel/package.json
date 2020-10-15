@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "tsc -w"
+    "serve": "tsc -w",
+    "test": "parcel ./src/index.html"
   },
   "keywords": [],
   "author": "",
